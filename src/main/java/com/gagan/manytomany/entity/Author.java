@@ -5,6 +5,7 @@
  */
 package com.gagan.manytomany.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -109,6 +110,20 @@ public class Author {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "Author [id=" + id + ", name=" + name +  "]";
+	}
+	
+	
+	public void addBook(Book book) {
+		if (books == null) {
+			books = new ArrayList<>();
+		}
+		books.add(book);
+	}
+	
 
 
 }

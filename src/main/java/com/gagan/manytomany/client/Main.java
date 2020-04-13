@@ -16,6 +16,13 @@ import com.gagan.manytomany.entity.Book;
 public class Main {
 	
 	/**
+	 * 
+	 * Problem Statement 
+	 * 2.1 Consider the entity relationship diagram as shown below. 
+	 * Identify the correct association between the book and author and implement the same using JPA. 
+	 * Create necessary entity classes and tables as required. 
+	 * 
+	 * Steps
 	 * 1. Create Manager Factor
 	 * 2. Create Manager
 	 * 3. Begin Transaction
@@ -24,6 +31,7 @@ public class Main {
 	 * .
 	 * 4. Commit Transaction
 	 * 5. Close Manager
+	 * 
 	 */
 	
 	public static void main(String[] args) {
@@ -32,6 +40,9 @@ public class Main {
 		EntityManager manager = factory.createEntityManager();
 		manager.getTransaction().begin();
 		
+		/**
+		 * Basic insertion is performed here for testing as only table creation was specified 
+		 */
 		Book book = new Book("Warrior Within", 999);
 		Author author = new Author("Gagan");
 		Author author2 = new Author("Monster");
